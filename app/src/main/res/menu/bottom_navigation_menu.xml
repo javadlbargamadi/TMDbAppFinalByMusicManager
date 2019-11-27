@@ -10,9 +10,9 @@
         android:icon="@drawable/ic_search"
         android:title="Search" />
     <item
-        android:id="@+id/watchlist_item"
-        android:icon="@drawable/ic_watchlist"
-        android:title="Watchlist" />
+        android:id="@+id/Favorites_item"
+        android:icon="@drawable/ic_favorite"
+        android:title="Favorites" />
     <item
         android:id="@+id/about_item"
         android:icon="@drawable/ic_about"
