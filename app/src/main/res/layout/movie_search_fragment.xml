@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SearchFragment">
+    tools:context=".MovieSearchFragment">
 
     <ImageView
         android:id="@+id/searchFragmentImageView"
@@ -93,6 +93,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/searchFragmentCardView"
         app:lottie_autoPlay="true"
-        app:lottie_fileName="empty_up.json"
+        app:lottie_fileName="search_file.json"
         app:lottie_loop="true" />
 </androidx.constraintlayout.widget.ConstraintLayout>
