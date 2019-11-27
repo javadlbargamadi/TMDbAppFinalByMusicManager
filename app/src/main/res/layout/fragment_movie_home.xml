@@ -25,6 +25,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
+                android:background="#000"
                 android:orientation="horizontal">
 
                 <com.airbnb.lottie.LottieAnimationView
@@ -132,6 +133,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
+                android:background="#000"
                 android:orientation="horizontal">
 
                 <com.airbnb.lottie.LottieAnimationView
