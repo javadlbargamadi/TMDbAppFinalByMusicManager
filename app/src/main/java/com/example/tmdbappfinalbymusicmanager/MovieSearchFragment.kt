@@ -17,7 +17,7 @@ class MovieSearchFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.movie_search_fragment, container, false)
+        return inflater.inflate(R.layout.fragment_movie_search, container, false)
     }
 
 

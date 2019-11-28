@@ -4,56 +4,147 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MovieFavoritesFragment">
+    tools:context=".MovieSearchFragment">
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/movieFavoritesFragmentCardViewFavorites"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <ImageView
+        android:id="@+id/favoritesFragmentImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="220dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/favorites_page_top_image"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- TODO: add toolbar layout like pouya -->
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/favoritesFragmentCardView"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="195dp"
+        android:layout_marginEnd="16dp"
+        app:cardCornerRadius="25dp"
+        app:cardElevation="3dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_max="500dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="horizontal">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/movieFavoritesFragmentAnimationYourFavorites"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
                 android:background="#000"
-                android:orientation="horizontal">
+                android:padding="1dp"
+                app:lottie_autoPlay="true"
+                app:lottie_fileName="ripple.json"
+                app:lottie_loop="true" />
 
-                <com.airbnb.lottie.LottieAnimationView
-                    android:id="@+id/movieFavoritesFragmentAnimationFavorites"
-                    android:layout_width="40dp"
-                    android:layout_height="match_parent"
-                    android:background="#000"
-                    android:padding="1dp"
-                    app:lottie_autoPlay="true"
-                    app:lottie_fileName="search_file.json"
-                    app:lottie_loop="true" />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:autoSizeTextType="uniform"
-                    android:background="#000"
-                    android:includeFontPadding="false"
-                    android:padding="5dp"
-                    android:text="Your Favorites.."
-                    android:textColor="#FF9800"
-                    android:textStyle="bold" />
-            </LinearLayout>
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:layout_width="match_parent"
+            <TextView
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:clipToPadding="false"
-                android:padding="5dp" />
+                android:layout_weight="1"
+                android:autoSizeTextType="uniform"
+                android:background="#000"
+                android:includeFontPadding="false"
+                android:padding="5dp"
+                android:text="Your Favorites..."
+                android:textColor="#FF9800"
+                android:textStyle="bold" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/favoritesFragmentRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@android:color/transparent"
+        android:clipToPadding="false"
+        android:paddingStart="8dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="8dp"
+        android:paddingBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/favoritesFragmentImageView" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/empty"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/favoritesFragmentCardView"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="empty_box2.json"
+        app:lottie_loop="true" />
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <!--<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--    xmlns:tools="http://schemas.android.com/tools"-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="match_parent"-->
+    <!--    tools:context=".MovieFavoritesFragment">-->
+
+    <!--    <androidx.cardview.widget.CardView-->
+    <!--        android:id="@+id/movieFavoritesFragmentCardViewFavorites"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent">-->
+
+    <!--        <LinearLayout-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="match_parent"-->
+    <!--            android:orientation="vertical">-->
+
+    <!--            <LinearLayout-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="40dp"-->
+    <!--                android:background="#000"-->
+    <!--                android:orientation="horizontal">-->
+
+    <!--                <com.airbnb.lottie.LottieAnimationView-->
+    <!--                    android:id="@+id/movieFavoritesFragmentAnimationFavorites"-->
+    <!--                    android:layout_width="40dp"-->
+    <!--                    android:layout_height="match_parent"-->
+    <!--                    android:background="#000"-->
+    <!--                    android:padding="1dp"-->
+    <!--                    app:lottie_autoPlay="true"-->
+    <!--                    app:lottie_fileName="search_file.json"-->
+    <!--                    app:lottie_loop="true" />-->
+
+    <!--                <TextView-->
+    <!--                    android:layout_width="0dp"-->
+    <!--                    android:layout_height="match_parent"-->
+    <!--                    android:layout_weight="1"-->
+    <!--                    android:autoSizeTextType="uniform"-->
+    <!--                    android:background="#000"-->
+    <!--                    android:includeFontPadding="false"-->
+    <!--                    android:padding="5dp"-->
+    <!--                    android:text="Your Favorites.."-->
+    <!--                    android:textColor="#FF9800"-->
+    <!--                    android:textStyle="bold" />-->
+    <!--            </LinearLayout>-->
+
+    <!--            <androidx.recyclerview.widget.RecyclerView-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="match_parent"-->
+    <!--                android:clipToPadding="false"-->
+    <!--                android:padding="5dp" />-->
+    <!--        </LinearLayout>-->
+    <!--    </androidx.cardview.widget.CardView>-->
+    <!--</androidx.constraintlayout.widget.ConstraintLayout>-->
