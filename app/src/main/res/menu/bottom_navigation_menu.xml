@@ -10,7 +10,7 @@
         android:icon="@drawable/ic_search"
         android:title="Search" />
     <item
-        android:id="@+id/Favorites_item"
+        android:id="@+id/favorites_item"
         android:icon="@drawable/ic_favorite"
         android:title="Favorites" />
     <item
